@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gsap Sample</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
 </head>
 <body>
     <div id="demo">
-        <h1 class="title">Hello World</h1>
+        <h1 data-text="Black lives matter!">Black lives matter!</h1>
         <div id="svgs">
-            <img src="img/svg1.svg" alt="">
-            <img src="img/svg1.svg" alt="">
-            <img src="img/svg1.svg" alt="">
-            <img src="img/svg1.svg" alt="">
+            <img src="img/svg1.png" alt="">
+            <img src="img/svg1.png" alt="">
+            <img src="img/svg1.png" alt="">
+            <img src="img/svg1.png" alt="">
         </div>
         <h2 id="contact">Contact</h2>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+
     <script>
-        gsap.set('#demo', { scale: 1 });
-        gsap.timeline()
-        .from('#demo', { duration: 1, opacity: 0 })
-        .from('.title', { duration: 5, opacity: 0, scale: 3 })
-        .from('#svgs img', { y: 500, opacity: 0, stagger: 0.3, duration: 0.8, ease: 'back' }, 2)
-        .from('#contact', { x: 400, duration: 0.4, opacity: 0, ease: 'back' }, 2)
+        gsap.timeline({ defaults: {opacity: 0}})
+        .from('#demo', { duration: 1 })
+        .from('h1', { duration: 3, scale: 3 })
+        .from('#svgs img', { y: 500, stagger: 0.3, duration: 0.8, ease: 'back' }, 2)
+        .from('#contact', { x: 400, duration: 0.5, ease: 'back' })
     </script>
+
 </body>
 </html>

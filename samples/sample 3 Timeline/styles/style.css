@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
 body {
     display: flex;
@@ -19,25 +20,68 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    background: url(../img/space.jpg) no-repeat;
+    background: url(../img/bg.jpg) no-repeat;
     background-size: cover;
 }
-#demo .title {
+h1 {
+    position: relative;
     font-size: 90px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    color: transparent;
+    user-select: none;
+    font-weight: 900;
+}
+h1:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: type 10s steps(19) infinite, blink-caret .4s infinite;
+    animation-delay: 5s;
+}
+@keyframes blink-caret {
+    from, to {border-color: transparent;}
+    50% {border-right: 4px solid #fff;}
+}
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    60% {
+        width: 100%;
+    }
+    70% {
+        width: 100%;
+    }
+    80% {
+        width: 100%;
+    }
+    90% {
+        width: 0;
+    }
+    100% {
+        width: 0;
+    }
 }
 #demo img {
-    width: 100px;
-    height: 100px;
-    margin: 100px 20px 0 20px;
+    width: 80px;
+    height: 80px;
+    margin: 100px 50px 0;
 }
 #demo h2 {
     position: absolute;
-    top: 20px;
-    right: 50px;
-    font-size: 55px;
+    top: 50px;
+    right: 70px;
+    font-size: 30px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #fff;
