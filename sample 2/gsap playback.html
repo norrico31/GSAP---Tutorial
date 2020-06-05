@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Playback</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .square {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="square"></div>
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <button id="reverse">Reverse</button>
+    <button id="reset">Reset</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+    <script>
+        let tween = gsap.to('.square', { duration: 3, x: 600, ease: 'linear', ease: 'power4.out', paused: true});
+        let play = document.getElementById('play');
+        let Pause = document.getElementById('Pause');
+        let reverse = document.getElementById('reverse');
+        let reset = document.getElementById('reset');
+
+        play.addEventListener('click', e => tween.play());
+        pause.addEventListener('click', () => tween.pause());
+        reverse.addEventListener('click', () => tween.reverse());
+        reset.addEventListener('click', (e) =>  {
+            if (!tween.isActive()) {
+                return
+            } else {
+                tween.restart()
+            }
+        });
+        
+        </script>
+</body>
+</html>

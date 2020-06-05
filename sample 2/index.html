@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gsap Sample</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div id="demo">
+        <h1 class="title">Hello World</h1>
+        <div id="svgs">
+            <img src="img/svg1.svg" alt="">
+            <img src="img/svg1.svg" alt="">
+            <img src="img/svg1.svg" alt="">
+            <img src="img/svg1.svg" alt="">
+        </div>
+        <h2 id="contact">Contact</h2>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/gsap.min.js"></script>
+    <script>
+        gsap.from('#demo', { duration: 1, opacity: 0 });
+        gsap.from('.title', { duration: 4, delay: 1, opacity: 0, scale: 3});
+        gsap.from('#svgs img', { duration: 0.5, delay: 2, scale: 0, stagger: 0.5});
+        gsap.from('#contact', { duration: 1, delay: 4, opacity: 0, xPercent: 100, ease: 'bounce'});
+    </script>
+</body>
+</html>
