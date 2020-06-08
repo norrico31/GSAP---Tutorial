@@ -23,7 +23,7 @@
     <script>
         gsap.timeline({ defaults: {opacity: 0}})
         .from('#demo', { duration: 1 })
-        .from('h1', { duration: 3, scale: 3 })
+        .from('h1', { duration: 3, scale: 3, ease: 'power4.out' })
         .from('#svgs img', { y: 500, stagger: 0.3, duration: 0.8, ease: 'back' }, 2)
         .from('#contact', { x: 400, duration: 0.5, ease: 'back' })
     </script>

@@ -42,8 +42,9 @@ h1:before {
     color: #fff;
     overflow: hidden;
     white-space: nowrap;
-    animation: type 10s steps(19) infinite, blink-caret .4s infinite;
+    animation: type 10s ease infinite, blink-caret .4s infinite;
     animation-delay: 5s;
+    
 }
 @keyframes blink-caret {
     from, to {border-color: transparent;}
@@ -85,4 +86,13 @@ h1:before {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #fff;
+}
+
+.p {
+    background: #6E64E7;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(45deg, #8C366C, #6E64E7);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(45deg, #8C366C, #6E64E7);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
