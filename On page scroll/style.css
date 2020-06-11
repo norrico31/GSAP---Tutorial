@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+body {
+    overflow-x: hidden;
+}
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: rgb(14, 16, 17);
+}
+section h2 {
+    font-size: 6em;
+    color: #fff;
+    font-weight: 700;
+}
+.box {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+}
+.box h2 {
+    font-size: 3em;
+}
+.box .logo {
+    max-width: 300px;
+}
+.box2 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background: #000;
+}
+.box2 h2 {
+    font-size: 3em;
+    color: #fff;
+}
